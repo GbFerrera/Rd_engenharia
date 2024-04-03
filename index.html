@@ -48,13 +48,13 @@
       <div id="formInformations">
         <p>Solicite já seu orçamento</p>
 
-        <form action="">
-          <input id="input" type="text" placeholder="Nome completo" />
-          <input id="input" type="email" placeholder="E-mail" />
-          <input id="input" type="tel" placeholder="WhatsApp" />
-          <input id="input" type="text" placeholder="Cidade" />
+        <form action="https://formsubmit.co/rdsolucoeseng@gmail.com" method="POST" >
+          <input id="input" type="text" name="Nome" placeholder="Nome completo" required />
+          <input id="input" type="email" name="E-mail" placeholder="E-mail" required />
+          <input id="input" type="tel" name="Telefone" placeholder="WhatsApp" required/>
+          <input id="input" type="text" name="Cidade" placeholder="Cidade" required/>
 
-          <button id="btnForm" type="button">Enviar</button>
+          <button id="btnForm" type="submit">Enviar</button>
         </form>
       </div>
 
@@ -77,7 +77,7 @@
             parte da revolução energética rumo a um mundo mais verde e econômico
           </p>
 
-          <button class="buttonSection">Simular orçamento</button>
+          <a href="#formInformations" class="buttonSection"> Simular orçamento</a>
         </div>
       </div>
 
@@ -95,7 +95,7 @@
           sustentabilidade ao imóvel e eliminando até mesmo a poluição sonora.
         </p>
 
-        <button class="buttonSection">Entenda como Funciona</button>
+        <a href="#commonQuestions" class="buttonSection">Entenda como Funciona</a>
       </div>
     </section>
 

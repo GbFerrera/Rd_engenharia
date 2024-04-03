@@ -97,6 +97,8 @@ html {
   animation: fadeInAnimation 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
 }
 
+
+
 @keyframes fadeInAnimation {
   from {
     opacity: 0;
@@ -112,8 +114,12 @@ html {
   body{
 
     font-family: "Inter", sans-serif;
-   
+    
   }
+
+  
+  
+
   
   header{
   
@@ -121,8 +127,7 @@ html {
   width: 100%;
   display: flex;
   align-items: center;
-  position: static;
-  
+ 
   
   
   #headerBox {
@@ -380,7 +385,6 @@ html {
     gap: 30px;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
   }
   
   .item {
@@ -429,7 +433,7 @@ html {
   
   display: flex;
   justify-content: center;
-  margin-bottom: 100px ;
+  margin: 0 auto 100px ;
   
   }
   
@@ -507,10 +511,12 @@ html {
   justify-content: center;
   gap: 80px;
   margin-bottom: 500px;
+ 
   
   p {
   
     color: #6D6D6D;
+    font-size: 16px;
   
    }
   
@@ -769,7 +775,15 @@ width: 100%;
 
 }
 
+article {
 
+  padding: 0;
+
+  #imgOne {
+
+    margin-left: 30px;
+  }
+}
 
  .services {
 
@@ -802,6 +816,12 @@ width: 100%;
  h5 {
 
   font-size: 30px;
+}
+
+p {
+
+ font-size: 16px;
+
 }
 
 
@@ -894,6 +914,7 @@ width: 100%;
  p {
 
    text-align: center;
+   font-size: 16px;
 
  }
 
@@ -906,6 +927,19 @@ width: 100%;
 
    margin: 0;
 
+
+   #columnThree {
+    width: 100%;
+
+   }
+
+
+  }
+
+  #carousel{
+
+    animation: none;
+    overflow-y: scroll;
 
   }
 
