@@ -1035,3 +1035,17 @@ display: none;
 }
 
 }
+
+@media only screen and (max-width: 425px){
+
+  main{
+   
+
+    #formInformations {
+
+      left: 10px;
+    }
+
+  }
+  
+}
