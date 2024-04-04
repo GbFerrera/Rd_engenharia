@@ -44,4 +44,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+const carousel = document.getElementById('carousel');
+const track = carousel.querySelector('.carousel-track');
+const items = document.querySelectorAll('.carousel-item');
+
+let currentIndex = 0;
+let itemWidth = items[0].offsetWidth;
+let isPaused = false;
+let intervalId;
+
+function nextSlide() {
+    if (!isPaused) {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+    }
+}
+
+function updateCarousel() {
+    const offset = -currentIndex * itemWidth;
+    track.style.transform = `translateX(${offset}px)`;
+}
+
+function togglePause() {
+    isPaused = !isPaused;
+}
+
+
+window.addEventListener('resize', () => {
+    itemWidth = items[0].offsetWidth;
+    updateCarousel();
+});
+
+
+intervalId = setInterval(nextSlide, 3000); 
+
+
+carousel.addEventListener('click', togglePause);
+
+
+items.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+    });
+});
+
+
 

@@ -72,22 +72,7 @@ html {
   }
 }
 
-#carousel {
-  display: flex;
-  gap: 30px;
-  transition: .5s ease;
-  animation: carousel 30s infinite; /* Aumenta a duração total da animação */
-}
 
-#carousel:hover {
-  animation-play-state: paused; 
-  transition: 3s;
-}
-
-
-#carousel .item:hover {
-  transform: scale(.9); 
-}
   
 
 
@@ -364,52 +349,87 @@ html {
   }
   
   
-  article {
-    margin-bottom: 50px;
-    height: 450px;
-    width: 100%;
+
+
+
+  .carousel-wrapper {
     background: red;
-    padding: 0 30px;
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    padding: 90px 50px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
     
-  }
+    
+
+    #imgOne {
+      position: absolute;
+        top: 0;
+        left: 0;
+      
+    }
+
+    #imgTwo {
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      opacity: 40%;
+     
+     
+    }
+}
+.carousel-wrapper::-webkit-scrollbar {
+    display: none; 
+}
+
+
+.carousel-track {
+
+  transition: transform 0.5s ease-in-out; 
+  display: flex;
+  gap: 20px;
+
+
+  .carousel-item {
+    padding: 20px;
+     width: 310px; 
+     height: 330px; 
+     background-color: white; 
+     opacity: 90%;
+     border-radius: 8px;
+     
+
+     img {
+
+        width: 270px;
+        height: 165px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 5px;
+
+        position: relative;
+
+     }
+ 
+     #description {
+       margin-top: 10px;
+       font-size: 14px;
+       
+     }
+ 
+     #title {
+ 
+       color: red;
+       font-weight: 500;
+     }
+ 
+   
+ }
+}
   
  
-  
-  #carousel {
-    display: flex;
-    margin-top: 60px;
-    position: fixed;
-    transition: transform 0.5s ease;
-    width: 100%;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .item {
-    background: white;
-    opacity: 90%;
-    border-radius: 8px;
-    height: 330px;
-    width: 310px;
-    padding: 14px;
-    z-index: 0;
-
-    transition: 1s;
-
-
-    .title {
-      font-size: 24px;
-      font-weight: 500;
-      color: red;
-    }
-  }
-  
-  .item img {
-    margin-bottom: 20px;
-  }
   
 
   
@@ -749,6 +769,7 @@ section {
 
 
 
+
 header {
 
   padding: 10px 30px;
@@ -812,16 +833,6 @@ width: 100%;
 }
 
 
-}
-
-article {
-
-  padding: 0;
-
-  #imgOne {
-
-    margin-left: 30px;
-  }
 }
 
  .services {
@@ -985,13 +996,6 @@ p {
 
    }
 
-
-  }
-
-  #carousel{
-
-    animation: none;
-    overflow: scroll;
 
   }
 
