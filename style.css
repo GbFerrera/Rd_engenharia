@@ -939,7 +939,7 @@ p {
   #carousel{
 
     animation: none;
-    overflow-y: scroll;
+    overflow: scroll;
 
   }
 
